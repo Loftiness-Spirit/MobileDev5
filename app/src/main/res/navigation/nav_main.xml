@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/firstScreen"
+        android:name="com.example.pr5.FirstScreen"
+        android:label="fragment_first_screen"
+        tools:layout="@layout/fragment_first_screen" >
+        <action
+            android:id="@+id/action_firstScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondScreen"
+        android:name="com.example.pr5.SecondScreen"
+        android:label="fragment_second_screen"
+        tools:layout="@layout/fragment_second_screen" >
+        <action
+            android:id="@+id/action_secondScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.pr5.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_firstScreen"
+            app:destination="@id/firstScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_secondScreen"
+            app:destination="@id/secondScreen" />
+    </fragment>
+</navigation>
